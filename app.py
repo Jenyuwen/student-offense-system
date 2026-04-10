@@ -6,7 +6,7 @@ app.secret_key = "secret123"
 
 # ================= DATABASE =================
 def connect_db():
-    return sqlite3.connect("/data/database.db")
+    return sqlite3.connect("database.db")
 
 def init_db():
     conn = connect_db()
