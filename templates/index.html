@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Offense System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+
+        <div class="nav-left">
+            <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+            <h2>Student Offense System</h2>
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+        </div>
+
+    </div>
+
+    <!-- CENTERED CONTENT -->
+    <div class="center-wrapper">
+
+        <div class="card main-card">
+            <h1>Welcome 👋</h1>
+
+            <p>
+                A web-based system designed to efficiently record, monitor, and manage 
+                student offenses. It promotes discipline, transparency, and accountability 
+                through a centralized digital platform.
+            </p>
+
+            <p>
+                Easily track violations, generate reports, and improve decision-making 
+                within the institution.
+            </p>
+
+            <a href="/login">
+                <button class="main-btn">Get Started</button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

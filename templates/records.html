@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Records</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <h2>📋 Student Offense System</h2>
+        <div>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/records">Records</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <!-- ADD REPORT -->
+    <div class="card">
+        <h2>Add Report</h2>
+
+        <form action="/add" method="POST" class="form-inline">
+            <input type="text" name="student_name" placeholder="Student Name" required>
+            <input type="text" name="offense" placeholder="Offense" required>
+            <input type="date" name="date" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
+    <!-- RECORDS TABLE -->
+    <div class="card">
+        <h2>Your Records 🔒</h2>
+
+        
+        {% if records %}
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Offense</th>
+                <th>Date</th>
+            </tr>
+
+            {% for row in records %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <p class="empty">No records yet.</p>
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

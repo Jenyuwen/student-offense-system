@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="nav-left">
+            <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+            <h2>Student Offense System</h2>
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+        </div>
+    </div>
+
+    <!-- CENTER LOGIN -->
+    <div class="center-wrapper">
+
+        <div class="login-card">
+
+            <h2>Welcome Back 👋</h2>
+            <p class="subtitle">Login to continue</p>
+
+            <form method="POST">
+
+                <div class="input-group">
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+
+                <button type="submit" class="main-btn">Login</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

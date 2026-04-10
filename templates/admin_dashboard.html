@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="nav-left">
+            <h2>Admin Panel 👑</h2>
+        </div>
+
+        <div class="nav-links">
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <!-- CENTER -->
+    <div class="dashboard-wrapper">
+
+        <div class="dashboard-card">
+
+            <h2>All Offense Records</h2>
+
+            <div class="total-box">
+                Total Records: {{ total }}
+            </div>
+
+            <table>
+                <tr>
+                    <th>Username</th>
+                    <th>Student Name</th>
+                    <th>Offense</th>
+                    <th>Date</th>
+                </tr>
+
+                {% for r in records %}
+                <tr>
+                    <td>{{ r[1] }}</td>
+                    <td>{{ r[2] }}</td>
+                    <td>{{ r[3] }}</td>
+                    <td>{{ r[4] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

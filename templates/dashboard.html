@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="nav-left">
+            <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+            <h2>Student Offense System</h2>
+        </div>
+
+        <div class="nav-links">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/records">Records</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+
+    <!-- CENTER CONTENT -->
+    <div class="center-wrapper">
+
+        <div class="main-card">
+
+            <h1>Welcome, {{ name }} 👋</h1>
+
+            <p class="subtitle">
+                Monitor and manage student offenses efficiently.
+            </p>
+
+            <p class="question">
+                Do you want to report a student offense?
+            </p>
+
+            <div class="actions">
+                <a href="/records">
+                    <button class="main-btn">Go to Records</button>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
